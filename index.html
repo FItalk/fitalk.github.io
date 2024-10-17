@@ -3,225 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Intelligence (FI) Talks</title>
+    <title>FI Talks Website</title>
     <style>
-        /* CSS styles */
+        /* General styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
+
+        /* Header section */
         header {
-            background-color: #FFFFCC; /* Comfortable yellow color */
-            color: #333;
-            text-align: center;
-            padding: 20px;
             position: relative;
-        }
-        #logo {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            height: 50px;
-        }
-        #top_image {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            height: 150px;
-        }
-        nav {
             text-align: center;
-            padding: 10px;
-            background-color: #f4f4f4;
-        }
-        nav a {
-            text-decoration: none;
-            margin: 0 10px;
-            color: #333;
-            font-weight: bold;
-        }
-        section {
-            padding: 20px;
-        }
-        .organizer-container {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .organizer {
-            width: 50%;
+            background-color: black;
+            color: white;
+            padding: 50px;
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
+            justify-content: space-between;
         }
+
+        /* Logos on the top left */
+        .logos {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .logos img {
+            width: 100px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        /* Header and subheader text */
+        .header-content {
+            flex-grow: 1;
+            margin-left: 80px;
+            color: white;
+            z-index: 1;
+            text-align: left; /* Align text to the left */
+        }
+
+        .header-content h1 {
+            font-size: 36px;
+            color: white;
+        }
+
+        .header-content h2 {
+            font-size: 24px;
+            color: white;
+        }
+
+        /* Image on the right */
+        header img {
+            top: 0;
+            right: 0;
+            width: 30%;
+            height: auto;
+            max-width: 400px;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        /* Navigation buttons */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000;
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #ddd;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #bbb;
+        }
+
+        /* Section styles */
+        section {
+            padding: 50px;
+        }
+
+        .welcome {
+            text-align: left;
+        }
+
+        /* Schedule section */
+        .schedule {
+            text-align: left;
+        }
+
+        .schedule h2 {
+            margin-bottom: 30px;
+        }
+
+        .zoom-details {
+            margin-bottom: 40px;
+        }
+
+        .speaker-list {
+            display: grid;
+            grid-template-columns: 1fr; /* One column layout */
+            gap: 20px;
+        }
+
+        .speaker-block {
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        /* Archive section */
+        .archive {
+            text-align: left;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .youtube-preview {
+            width: 100%;
+            height: 200px;
+        }
+
+        /* Organizer section */
+        .organizers {
+            text-align: left;
+        }
+
+        .organizer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .organizer {
+            text-align: left;
+        }
+
         .organizer img {
             width: 100px;
-            height: 100px; /* Set the same height as width */
-            border-radius: 50%;
-            margin-right: 20px;
+            height: 100px;
             object-fit: cover;
-        }
-        .institution-logo {
-            width: 200px;
-            height: 100%;
-            margin-right: 10px;
+            border-radius: 50%;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <img id="logo" src="images/FI_talk_logo.png" alt="FI Talks Logo">
-    <img id="top_image" src="images/top_image.jpg" alt="Top Image">
-    <h1>Future Intelligence (FI) Talks</h1>
-    <h2>Disseminate State-Of-The-Art Research Work to Enthusiasts</h2>
-</header>
+    <!-- Header Section -->
+    <header>
+        <div class="logos">
+            <img src="images/Reversed colour RGB_DM.png" alt="Logo 1">
+            <img src="images/cropped-cropped-birl_no_textv2-5.webp" alt="Logo 2">
+            <img src="images/FI_talk_logo.png" alt="Logo 3">
+        </div>
+        <div class="header-content">
+            <h1>Future Intelligence (FI) Talks</h1>
+            <h2>Disseminate State-Of-The-Art Research Work to Enthusiasts</h2>
+        </div>
+        <img src="images/top_image.jpg" alt="Top Image">
+    </header>
 
-<nav>
-    <a href="#FI talk">FI talks</a>
-    <a href="#schedule">Schedule</a>
-    <a href="#organizers">Organizers</a>
-</nav>
+    <!-- Navigation Buttons -->
+    <nav>
+        <a href="#welcome">Welcome</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#archive">Archive</a>
+        <a href="#organizers">Organizers</a>
+    </nav>
 
-<section id="FI talk">
-    <h2>FI talk</h2>
-    <p>
-        Future Intelligence (FI) Talks is an online talk series occur every other Tuesday designed to spotlight the work of excellent early career researchers. Our aim is to enhance the visibility of these researchers and disseminate state-of-the-art research work in future intelligence to enthusiasts.
-    </p>
-    <p>
+    <!-- Welcome Section -->
+    <section id="welcome" class="welcome">
+        <h2>Welcome to FI Talks</h2>
+        <p>Future Intelligence (FI) Talks is an online talk series occur every other Tuesday designed to spotlight the work of excellent early career researchers. Our aim is to enhance the visibility of these researchers and disseminate state-of-the-art research work in future intelligence to enthusiasts.​</p>
+        <p>
         YouTube Channel: <a href="https://youtube.com/channel/UCpq_uwlsTB7fzf3CV0ctGpQ?feature=shared">FI Talks</a><br>
         Subscribe for Updates or Register as a Speaker: <a href="https://forms.gle/WMrQrTbS2iFsbbRP7">https://forms.gle/WMrQrTbS2iFsbbRP7</a><br>
         Contact Email: <a href="mailto:future.intelligence.talk@gmail.com">future.intelligence.talk@gmail.com</a>
-    </p>
-</section>
+        </p>
+    </section>
 
-<section id="schedule">
-    <h2>Upcoming Talks Schedule</h2>
-    <p>
-        Zoom link: <a href="https://cam-ac-uk.zoom.us/j/83203210940?pwd=Vml3NmxOYitWTnRIbkRDdDdmdUxWdz09">https://cam-ac-uk.zoom.us/j/83203210940?pwd=Vml3NmxOYitWTnRIbkRDdDdmdUxWdz09</a><br>
-        Meeting ID: 832 0321 0940<br>
-        Passcode: 359216
-    </p>
-    <p>
-        Date & time: 22, October, 2024, 14:00 (BST)<br>
-        Speaker: Michal Piovarci, Postdoc, ETH Zurich<br>
-        Title: Breaking Limitations of Fabrication Hardware With Reinforcement Learning<br>
-    </p>
-    <p>
-        Date & time: 5, November, 2024, 14:00 (GMT)<br>
-        Speaker: Athina Papadopoulou, Assistant Professor, New York Institute of Technology<br>
-        Title: Affective Matter: Programmable wearable materials for health and wellbeing<br>
-    </p>
-    <p>
-        Date & time: 19, November, 2024, 16:00 (GMT)<br>
-        Speaker: Xi Wang, Assistant Professor, Texas A&M University<br>
-        Title: TBD
-    </p>
-</section>
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule">
+        <h2>Upcoming Schedule</h2>
+        <div class="zoom-details">
+            <p><strong>Zoom Meeting Details:</strong></p>
+            <p>Zoom link: <a href="https://cam-ac-uk.zoom.us/j/83203210940?pwd=Vml3NmxOYitWTnRIbkRDdDdmdUxWdz09">https://cam-ac-uk.zoom.us/j/83203210940?pwd=Vml3NmxOYitWTnRIbkRDdDdmdUxWdz09</a><br></p>
+            <p>Meeting ID: 832 0321 0940</p>
+            <p>Passcode: 359216</p>
+        </div>
+        <h3>Upcoming Speakers</h3>
+        <div class="speaker-list">
+            <div class="speaker-block">
+                Speaker: Michal Piovarci, Postdoc, ETH Zurich<br>
+                Date & time: 22, October, 2024, 14:00 (BST)<br>
+                Title: Breaking Limitations of Fabrication Hardware With Reinforcement Learning<br>
+            </div>
+            <div class="speaker-block">
+                Speaker: Athina Papadopoulou, Assistant Professor, New York Institute of Technology<br>
+                Date & time: 5, November, 2024, 14:00 (GMT)<br>
+                Title: Affective Matter: Programmable wearable materials for health and wellbeing<br></div>
+            <div class="speaker-block">
+                Speaker: Xi Wang, Assistant Professor, Texas A&M University<br>
+                Date & time: 19, November, 2024, 16:00 (GMT)<br>
+                Title: TBD</div>
+        </div>
+    </section>
 
-<section id="previous">
-    <h2>Previous Talks</h2>
-    <p>
-        Date & time: 9, October, 2024, 14:00 (BST)<br>
-        Speaker: Grisha Szep<br>
-        Title: Optimisation with respect to Qualitative Objectives<br>
-        Link: <a href="https://youtu.be/qT1abm2hXaI">https://youtu.be/qT1abm2hXaI</a>
-    </p>
-    <p>
-        Date & time: 24 September 2024, 14:00 (BST)<br>
-        Speaker: Antonia Tzemanaki, Senior Lecturer, University of Bristol<br>
-        Title: Haptics, Tactile Sensing and Dexterous Manipulation and Teleoperation with the End-User in Mind<br>
-        Link: <a href="https://youtu.be/7iLWZ0aip8E">https://youtu.be/7iLWZ0aip8E</a>
-    </p>
-    <p>
-        Date & time: 10 September 2024, 18:00 (BST)<br>
-        Speaker: Cathy Wu, Associate Professor, MIT<br>
-        Title: Learning-guided Optimization for Mobility<br>
-        Link: <a href="https://youtu.be/-R6eNga4roQ">https://youtu.be/-R6eNga4roQ</a>
-    </p>
-    <p>
-        Date & time: 13 August 2024, 11:30 (BST)<br>
-        Speaker: Golnoosh Shahkarami and Ke Xue<br>
-        Title: Panel Discussion between Golnoosh Shahkarami and Ke Xue<br>
-        Link: <a href="https://youtu.be/IQRZQNlDiEg">https://youtu.be/IQRZQNlDiEg</a>
-    </p>
-    <p>
-        Date & time: 13 August 2024, 11:15 (BST)<br>
-        Speaker: Ke Xue, PhD student, Nanjing University<br>
-        Title: Quality-Diversity: Theories, Algorithms, and Applications<br>
-        Link: <a href="https://youtu.be/BzwA0-T5vgE">https://youtu.be/BzwA0-T5vgE</a>
-    </p>
-    <p>
-        Date & time: 13 August 2024, 11:00 (BST)<br>
-        Speaker: Golnoosh Shahkarami, PhD student, Max Planck Institute<br>
-        Title: Learning Augmented Algorithms<br>
-        Link: <a href="https://youtu.be/qFxA6tAdRys">https://youtu.be/qFxA6tAdRys</a>
-    </p>
-    <p>
-        Date & time: 30 July 2024, 14:00 (BST)<br>
-        Speaker: Thilina Dulantha Lalitharatne, Assistant Professor, Queen Mary University of London<br>
-        Title: Multimodal Signal Sensing and Synthesis: Advancing Medical Robotics<br>
-        Link: <a href="https://youtu.be/pEGzqSjedyA">https://youtu.be/pEGzqSjedyA</a>
-    </p>
-    <p>
-        Date & time: 2 July 2024, 14:00 (BST)<br>
-        Speaker: Di Fu, Assistant Professor at the University of Surrey<br>
-        Title: Mind Meets Machine: Social Cues Integration in Crossmodal Human-Robot Interaction<br>
-        Link: <a href="https://youtu.be/-433_AhlH4E">https://youtu.be/-433_AhlH4E</a>
-    </p>
-    <p>
-        Date & time: 4 June 2024, 14:00 (BST)<br>
-        Speaker: Micol Spitale, Assistant Professor at the Politecnico di Milano, Former Postdoctoral Researcher at the University of Cambridge<br>
-        Title: Emotional and intelligent robots: reality or fiction?<br>
-        Link: <a href="https://youtu.be/pzwIJ5ZgZHY">https://youtu.be/pzwIJ5ZgZHY</a>
-    </p>
+    <!-- Archive Section -->
+    <section id="archive" class="archive">
+        <h2>Previous Talks Archive</h2>
+        <a href="https://youtube.com/channel/UCpq_uwlsTB7fzf3CV0ctGpQ?feature=shared" target="_blank">More talks &gt;&gt;</a>
+        <div class="video-grid">
+            <iframe class="youtube-preview" src="https://www.youtube.com/embed/qT1abm2hXaI" frameborder="0" allowfullscreen></iframe>
+            <iframe class="youtube-preview" src="https://www.youtube.com/embed/7iLWZ0aip8E" frameborder="0" allowfullscreen></iframe>
+            <iframe class="youtube-preview" src="https://www.youtube.com/embed/-R6eNga4roQ" frameborder="0" allowfullscreen></iframe>
+            <iframe class="youtube-preview" src="https://www.youtube.com/embed/IQRZQNlDiEg" frameborder="0" allowfullscreen></iframe>
+        </div>
+        </div>
+    </section>
 
-<section id="organizers">
-    <h2>Organizers</h2>
-    <div class="organizer-container">
-    <div class="organizer">
-        <img src="images/Kai-Fung Chu.jpg" alt="Organizer 1">
-        <div>
-            <p>
-                Dr. Kai-Fung Chu, Marie Skłodowska-Curie Fellow<br>
-                Department of Engineering, University of Cambridge<br>
-                Email: <a href="mailto:kfc35@cam.ac.uk">kfc35 [AT] cam.ac.uk</a>
-            </p>
+    <!-- Organizers Section -->
+    <section id="organizers" class="organizers">
+        <h2>Our Organizers</h2>
+        <div class="organizer-grid">
+            <div class="organizer">
+                <img src="images/Kai-Fung Chu.jpg" alt="Organizer 1">
+                <p>
+                    Dr. Kai-Fung Chu<br>
+                    Marie Skłodowska-Curie Fellow<br>
+                    Department of Engineering<br>
+                    University of Cambridge<br>
+                    Email: <a href="mailto:kfc35@cam.ac.uk">kfc35 [AT] cam.ac.uk</a>
+                </p>
+            </div>
+            <div class="organizer">
+                <img src="images/Chapa.png" alt="Organizer 2">
+                <p>
+                    Dr. Chapa Sirithunge<br>
+                    Marie Skłodowska-Curie Fellow<br>
+                    Department of Engineering<br>
+                    University of Cambridge<br>
+                    Email: <a href="mailto:csh66@cam.ac.uk">csh66 [AT] cam.ac.uk</a>
+                </p>
+            </div>
+            <div class="organizer">
+                <img src="images/Jerry.jpg" alt="Organizer 3">
+                <p>
+                    Dr. Jerry Xu<br>
+                    Senior Research Associate<br>
+                    Department of Engineering<br>
+                    University of Cambridge<br>
+                    Email: <a href="mailto:jx322@cam.ac.uk">jx322 [AT] cam.ac.uk</a>
+                </p>
+            </div>
+            <div class="organizer">
+                <img src="images/Yue.jpeg" alt="Organizer 4">
+                <p>
+                    Dr. Yue Xie<br>
+                    Marie Skłodowska-Curie Fellow<br>
+                    Department of Engineering<br>
+                    University of Cambridge<br>
+                    Email: <a href="mailto:yx388@cam.ac.uk">yx388 [AT] cam.ac.uk</a>
+                </p>
+            </div>
         </div>
-    </div>
-    <div class="organizer">
-        <img src="images/Chapa.png" alt="Organizer 2">
-        <div>
-            <p>
-                Dr. Chapa Sirithunge, Marie Skłodowska-Curie Fellow<br>
-                Department of Engineering, University of Cambridge<br>
-                Email: <a href="mailto:csh66@cam.ac.uk">csh66 [AT] cam.ac.uk</a>
-            </p>
-        </div>
-    </div>
-    <div class="organizer">
-        <img src="images/Jerry.jpg" alt="Organizer 3">
-        <div>
-            <p>
-                Dr. Jerry Xu, Senior Research Associate<br>
-                Department of Engineering, University of Cambridge<br>
-                Email: <a href="mailto:jx322@cam.ac.uk">jx322 [AT] cam.ac.uk</a>
-            </p>
-        </div>
-    </div>
-    <div class="organizer">
-        <img src="images/Yue.jpeg" alt="Organizer 4">
-        <div>
-            <p>
-                Dr. Yue Xie, Marie Skłodowska-Curie Fellow<br>
-                Department of Engineering, University of Cambridge<br>
-                Email: <a href="mailto:yx388@cam.ac.uk">yx388 [AT] cam.ac.uk</a>
-            </p>
-        </div>
-    </div>
-    <img class="institution-logo" src="images\Colour logo RGB_DM.jpg" alt="Cambridge Logo">
-    </div>
-</section>
+    </section>
 
 </body>
 </html>
