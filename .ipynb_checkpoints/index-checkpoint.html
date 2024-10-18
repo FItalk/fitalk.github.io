@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FI Talks Website</title>
     <style>
+        @font-face {
+            font-family: 'ADLaM Display';
+            src: url('ADLaM_Display/ADLaMDisplay-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
         /* General styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Aptos ', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -15,11 +22,12 @@
 
         /* Header section */
         header {
+            font-family: 'ADLaM Display', sans-serif;
             position: relative;
             text-align: center;
-            background-color: black;
+            background: linear-gradient(to right, black 65%, white 100%);
             color: white;
-            padding: 50px;
+            padding: 0px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -28,8 +36,8 @@
         /* Logos on the top left */
         .logos {
             position: absolute;
+            margin-left: 50px;
             top: 20px;
-            left: 20px;
         }
 
         .logos img {
@@ -41,14 +49,15 @@
         /* Header and subheader text */
         .header-content {
             flex-grow: 1;
-            margin-left: 80px;
+            margin-left: 50px;
+            margin-top: 50px;
             color: white;
             z-index: 1;
             text-align: left; /* Align text to the left */
         }
 
         .header-content h1 {
-            font-size: 36px;
+            font-size: 48px;
             color: white;
         }
 
@@ -59,13 +68,11 @@
 
         /* Image on the right */
         header img {
-            top: 0;
-            right: 0;
-            width: 30%;
-            height: auto;
-            max-width: 400px;
-            object-fit: cover;
-            z-index: 0;
+            width: 30%; /* Adjust the width of the image */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 400px; /* Cap the maximum width */
+            margin: 0; /* Remove margin */
+            padding: 0; /* Remove padding */
         }
 
         /* Navigation buttons */
@@ -175,7 +182,7 @@
             <img src="images/FI_talk_logo.png" alt="Logo 3">
         </div>
         <div class="header-content">
-            <h1>Future Intelligence (FI) Talks</h1>
+            <h1>Future Intelligence Talks</h1>
             <h2>Disseminate State-Of-The-Art Research Work to Enthusiasts</h2>
         </div>
         <img src="images/top_image.jpg" alt="Top Image">
